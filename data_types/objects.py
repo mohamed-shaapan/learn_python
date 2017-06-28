@@ -19,3 +19,6 @@ class Employee:
 
     def displayEmployee(self):
         print ("Name : ", self.name, ", Salary: ", self.salary)
+
+
+emp1 = Employee("mohamed", 100)
