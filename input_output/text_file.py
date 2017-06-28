@@ -1,14 +1,14 @@
 # Open file
 # FLAGS: 'r' read, 'w' write, 'a' append
-
-file_path = "..\resources\test.txt"
-file = open(file_path, 'w')
+file_path = "test.txt"
+file = open(file_path, 'r')
 
 # Reads entire file
-#string_var = file.read()
+string_var = file.read()
+print(string_var)
 
 # Read single line
-#string_var = file.readline()
+string_var = file.readline()
 
 # Write string to a file
 var = "Mohamed"
