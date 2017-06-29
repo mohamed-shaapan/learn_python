@@ -1,24 +1,70 @@
-class Employee:
+class Person:
 
     # ATTRIBUTES
     # ******************************************
-    empCount = 0
+    firstname = ""
+    lastname = ""
+    age=-1
 
     # CONSTRUCTOR
     # ******************************************
-    def __init__(self, name, salary):
-        self.name = name
-        self.salary = salary
-        Employee.empCount += 1
-
+    def __init__(self, first, last, age):
+        self.firstname = first
+        self.lastname = last
+        self.age=age
 
     # METHODS
     # ******************************************
-    def displayCount(self):
-        print ("Total Employee %d" % Employee.empCount)
+    def displayFirstName(self):
+        print ("first name", self.firstname)
 
-    def displayEmployee(self):
-        print ("Name : ", self.name, ", Salary: ", self.salary)
+    def displayLastName(self):
+        print("last name", self.lastname)
+
+    def displayAge(self):
+        print("age", self.age)
 
 
-emp1 = Employee("mohamed", 100)
+# Inheritance
+# *********************************************************************
+# *********************************************************************
+class Employee(Person):
+
+    # ATTRIBUTES
+    # ******************************************
+    staffID=-1
+
+    # CONSTRUCTOR
+    # ******************************************
+    def __init__(self, first, last, age, staffID):
+        # super class
+        super().__init__(first, last, age)
+        # proprietary attributes
+        self.staffID = staffID
+
+    # METHODS
+    # ******************************************
+    def displayStaffID(self):
+        print("staff ID", self.staffID)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
